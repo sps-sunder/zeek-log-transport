@@ -196,7 +196,7 @@ fi
 if [ -z "$local_tld" ]; then
 	# Check for zeek paths first
 	if [ -d /log/blog/ ]; then				#Firewalla Directory
-		local_tld='/storage/zeek/logs/'
+		local_tld='/log/blog/'
 	elif [ -d /opt/zeek/logs/ ]; then				#Zeek as installed by Rita
 		local_tld='/opt/zeek/logs/'
 	elif [ -d /usr/local/zeek/logs/ ]; then				#Zeek default
