@@ -195,7 +195,7 @@ fi
 #Make sure the directory ends in a "/".
 if [ -z "$local_tld" ]; then
 	# Check for zeek paths first
-	if [ -d /storage/zeek/logs/ ]; then				#Custom
+	if [ -d /log/blog/ ]; then				#Firewalla Directory
 		local_tld='/storage/zeek/logs/'
 	elif [ -d /opt/zeek/logs/ ]; then				#Zeek as installed by Rita
 		local_tld='/opt/zeek/logs/'
