@@ -148,7 +148,7 @@
 	status "Finding local log directory"
 	local_tld=''
 	#Check $2 (if set) and common log directories to find where the logs are.
-	for potential_local_tld in $2 /opt/zeek/logs/ /usr/local/zeek/logs/ /var/lib/docker/volumes/var_log_zeek/_data/ /nsm/zeek/logs /storage/zeek/logs/ /opt/bro/logs/ /usr/local/bro/logs/ /var/lib/docker/volumes/var_log_bro/_data/ /nsm/bro/logs /storage/bro/logs/ ; do
+	for potential_local_tld in $2 /log/blog/ /usr/local/zeek/logs/ /var/lib/docker/volumes/var_log_zeek/_data/ /nsm/zeek/logs /storage/zeek/logs/ /opt/bro/logs/ /usr/local/bro/logs/ /var/lib/docker/volumes/var_log_bro/_data/ /nsm/bro/logs /storage/bro/logs/ ; do
 		if [ -n "$potential_local_tld" -a -d "$potential_local_tld" -a -r "$potential_local_tld" -a -L "$potential_local_tld/current" ]; then
 			local_tld="$potential_local_tld"
 			break			#Once we found the log dir, stop looking at the rest.
